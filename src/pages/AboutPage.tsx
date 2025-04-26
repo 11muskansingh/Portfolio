@@ -57,51 +57,50 @@ const AboutPage = () => {
     <div className="container max-w-5xl mx-auto py-12">
       <PageHeading preTitle="Hello..." title="A little bit about me..." />
 
-      <div className="grid md:grid-cols-3 gap-8 mb-16">
-        <div className="col-span-1">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center mb-16">
+        {/* Avatar */}
+        <div className="flex justify-center">
           <img
-            src="/lovable-uploads/cae73c1c-640c-4324-b445-8079f4895dfa.png"
+            src="/images/avatar.png"
             alt="Muskan"
-            className="w-full max-w-xs mx-auto rounded-lg shadow-lg"
+            className="w-48 h-48 object-cover rounded-lg shadow-md md:w-56 md:h-56"
           />
         </div>
-        <div className="col-span-2 space-y-4">
-          <div className="bg-card rounded-lg p-6 shadow">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="bg-primary/20 text-primary px-3 py-0.5 rounded-full text-sm">
-                Full Stack Developer | AI & ML Enthusiast
-              </span>
-              <div className="flex items-center text-sm text-muted-foreground">
-                <span className="inline-block w-4 h-4 mr-1">📍</span> Uttar
-                Pradesh, India
+
+        {/* About Info */}
+        <div className="md:col-span-2 space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <span className="bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-semibold tracking-wide w-fit mx-auto md:mx-0">
+              Full Stack Developer | AI & ML Enthusiast
+            </span>
+            <div className="flex flex-col items-center md:items-end text-gray-400 text-sm space-y-1">
+              <div className="flex items-center gap-1">
+                📍 <span>Uttar Pradesh, India</span>
               </div>
               <a
                 href="mailto:spariharmuskan1106@gmail.com"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="hover:text-green-500 transition-colors"
               >
                 spariharmuskan1106@gmail.com
               </a>
             </div>
+          </div>
 
-            <p className="mb-4">
-              I am a dedicated MERN stack developer with a strong command over
-              JavaScript, React, Node.js, and MongoDB, building dynamic,
-              responsive, and scalable web applications.
+          <div className=" p-6 rounded-lg shadow-lg space-y-4 text-gray-300 text-justify">
+            <p>
+              I am a passionate MERN stack developer skilled in JavaScript,
+              React, Node.js, and MongoDB, focused on building dynamic and
+              scalable web applications.
             </p>
-            <p className="mb-4">
-              With over 800 problems solved on LeetCode, I have honed my
-              algorithmic and problem-solving skills, ensuring optimal solutions
-              for complex challenges..
+            <p>
+              With over 800 problems solved on LeetCode, I have strengthened my
+              problem-solving abilities, ensuring efficient solutions to complex
+              challenges.
             </p>
-            <p className="mb-4">
-              In addition to my development expertise, I am deeply passionate
-              about AI/ML, constantly expanding my knowledge and working on
-              integrating machine learning models to enhance the functionality
-              and intelligence of my applications.
-            </p>
-            <p className="mb-4">
-              This diverse background gives me the flexibility to adapt to a
-              wider range of project needs.
+            <p>
+              I am also deeply enthusiastic about AI/ML, consistently expanding
+              my knowledge and integrating intelligent models into applications
+              to enhance functionality.
             </p>
             <p>I look forward to collaborating with you!</p>
           </div>

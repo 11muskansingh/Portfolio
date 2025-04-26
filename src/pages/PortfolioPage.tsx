@@ -10,82 +10,74 @@ const projects = [
     type: "Dev Projects",
     image: "../../public/images/hirehub.png",
     description:
-      "A RESTful API backend built with Node.js, designed for high-performance data processing and real-time event handling.",
-    tags: ["API", "REST", "Backend"],
+      "HireHub is a full-stack job portal designed to simplify the job search and hiring process. With role-based access, real-time updates, and a responsive UI, it connects recruiters and job seekers in a seamless hiring ecosystem.",
+    tags: ["MERN", "Firebase", "Job Hunt"],
     links: {
-      github: "#",
-      demo: "#",
-      youtube: "#",
+      github: "https://github.com/11muskansingh/HireHub",
+      demo: "https://hirehub-gz47.onrender.com/",
     },
   },
   {
     id: 2,
     title: "YouView",
-    type: "App",
+    type: "Dev Projects",
     image: "../../public/images/YouView.png",
     description:
-      "A cross-platform email client built with Flutter, providing efficient communication with an intuitive UI for managing emails.",
-    tags: ["Flutter", "E-mail", "Communication"],
+      "YouView is a fully functional YouTube clone providing users with a complete video browsing and streaming experience. Built with a modern tech stack, YouView allows users to search, upload, interact with, and organize videos within a visually appealing and intuitive interface.",
+    tags: ["MERN", "Secure Login", "Video Upload"],
     links: {
-      github: "#",
-      demo: "#",
-      appStore: "#",
-      playStore: "#",
+      github: "https://github.com/11muskansingh/YouView",
+      demo: "https://you-view-teal.vercel.app/",
     },
   },
   {
     id: 3,
     title: "ReactJS Projects",
-    type: "App",
+    type: "Dev Projects",
     image: "../public/images/ReactJs.png",
     description:
-      "A fully-featured productivity app developed with React Native, enabling users to organize tasks, notes, and projects across multiple devices. It offers cloud sync, intuitive UI, and collaboration features.",
-    tags: ["React", "Organization", "Notes"],
+      "A collection of ReactJS projects showcasing various features and functionalities, including a password generator and more.",
+    tags: ["React", "Copy", "Pawword Management"],
     links: {
-      github: "#",
-      demo: "#",
-      appStore: "#",
-      playStore: "#",
+      github: "https://github.com/11muskansingh/ReactJS-Projects",
     },
   },
   {
     id: 4,
-    title: "SmartCash",
-    type: "Website",
-    image: "https://via.placeholder.com/250/4ADE80/000000?text=SmartCash",
+    title: "Stone Paper Scissors Game",
+    type: "Dev Projects",
+    image: "../public/images/Sps.png",
     description:
-      "A comprehensive financial management website that helps users track expenses, create budgets, and visualize spending patterns.",
-    tags: ["Finance", "Dashboard", "Analytics"],
+      "Stone Paper Scissors is a fun and interactive web game where players compete against the computer using classic hand signs. Built with clean UI and smooth animations, it offers an engaging and responsive gaming experience.",
+    tags: ["JavaScript", "Game", "Responsive UI", "Fun Project"],
     links: {
-      github: "#",
-      demo: "#",
+      github: "https://github.com/11muskansingh/Stone-Paper-Scissor-game",
+      demo: "https://stone-paper-scissor-game-roan.vercel.app/",
     },
   },
   {
     id: 5,
-    title: "Snappy",
-    type: "App",
-    image: "https://via.placeholder.com/250/F97316/FFFFFF?text=Snappy",
+    title: "Netflix Clone",
+    type: "Dev Projects",
+    image: "../public/images/Netflix.png",
     description:
-      "A social photo-sharing application with advanced filters, effects, and community features.",
-    tags: ["Photography", "Social", "Mobile"],
+      "This project is a static clone of the Netflix website, showcasing fundamental HTML and CSS skills. It aims to replicate the Netflix homepage with a focus on responsive design.",
+    tags: ["UI Clone", "Responsive Design", "Frontend Project"],
     links: {
-      github: "#",
-      demo: "#",
-      appStore: "#",
-      playStore: "#",
+      github: "https://github.com/11muskansingh/HTML-CSS-Project",
+      demo: "https://html-css-project-dun.vercel.app/",
     },
   },
   {
     id: 6,
-    title: "Sweet Scoops",
-    type: "Website",
-    image: "https://via.placeholder.com/250/F472B6/FFFFFF?text=Sweet+Scoops",
+    title: "TalkHub",
+    type: "ML Projects",
+    image: "../public/images/Talkhub.png",
     description:
-      "An e-commerce website for an ice cream brand with online ordering, delivery tracking, and customer loyalty program.",
-    tags: ["E-commerce", "Food", "Delivery"],
+      "talkHub is an AI-powered voice assistant that allows users to interact with the application using voice commands and receive spoken responses. This project leverages OpenAI's API for natural language processing and conversation generation, making it a powerful and versatile voice assistant.",
+    tags: ["AI", "Voice Assistant", "OpenAI API"],
     links: {
-      github: "#",
+      github: "https://github.com/chinmaypandey62/talkHub",
       demo: "#",
     },
   },
@@ -108,7 +100,7 @@ const PortfolioPage = () => {
     <div className="container max-w-6xl mx-auto py-12">
       <PageHeading
         preTitle="Take a look at"
-        title="My Portfolio"
+        title="My Projects"
         subtitle="Here are some of the projects I've worked on recently"
       />
 
@@ -127,9 +119,9 @@ const PortfolioPage = () => {
             >
               {filter} {filter === "All" && `(${projects.length})`}
               {filter === "Dev Projects" &&
-                `(${projects.filter((p) => p.type === "App").length})`}
+                `(${projects.filter((p) => p.type === "Dev Projects").length})`}
               {filter === "ML Projects" &&
-                `(${projects.filter((p) => p.type === "Website").length})`}
+                `(${projects.filter((p) => p.type === "ML Projects").length})`}
               {/* {filter === "Utilities" &&
                 `(${projects.filter((p) => p.type === "Utility").length})`} */}
             </button>
@@ -198,7 +190,7 @@ const PortfolioPage = () => {
                   </a>
                 )}
 
-                {project.links.youtube && (
+                {/* {project.links.youtube && (
                   <a
                     href={project.links.youtube}
                     className="p-2 bg-secondary rounded-full hover:bg-primary/20 transition-colors"
@@ -206,9 +198,9 @@ const PortfolioPage = () => {
                   >
                     <Youtube className="w-5 h-5" />
                   </a>
-                )}
+                )} */}
 
-                {project.links.appStore && (
+                {/* {project.links.appStore && (
                   <a
                     href={project.links.appStore}
                     className="p-2 bg-secondary rounded-full hover:bg-primary/20 transition-colors"
@@ -216,9 +208,9 @@ const PortfolioPage = () => {
                   >
                     <Apple className="w-5 h-5" />
                   </a>
-                )}
+                )} */}
 
-                {project.links.playStore && (
+                {/* {project.links.playStore && (
                   <a
                     href={project.links.playStore}
                     className="p-2 bg-secondary rounded-full hover:bg-primary/20 transition-colors"
@@ -226,7 +218,7 @@ const PortfolioPage = () => {
                   >
                     <PlayCircle className="w-5 h-5" />
                   </a>
-                )}
+                )} */}
               </div>
             </div>
           </div>
@@ -234,11 +226,11 @@ const PortfolioPage = () => {
       </div>
 
       {/* More Projects Button */}
-      <div className="text-center mt-12">
+      {/* <div className="text-center mt-12">
         <Button variant="outline" size="lg">
           Load More Projects
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };

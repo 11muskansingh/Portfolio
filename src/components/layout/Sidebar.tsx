@@ -30,7 +30,7 @@ const navItems = [
   { name: "Education", path: "/education", icon: GraduationCap },
   { name: "Skills", path: "/skills", icon: BarChart3 },
   { name: "Experience", path: "/experience", icon: Briefcase },
-  { name: "Portfolio", path: "/portfolio", icon: LayoutIcon },
+  { name: "Projects", path: "/portfolio", icon: LayoutIcon },
   { name: "Achievements", path: "/achievements", icon: Award },
   { name: "Updates", path: "/updates", icon: Bell },
   { name: "Contact", path: "/contact", icon: Mail },
@@ -74,11 +74,8 @@ const Sidebar = () => {
                   isCollapsed ? "w-10 h-10" : "w-24 h-24"
                 )}
               >
-                <AvatarImage
-                  src="/lovable-uploads/cae73c1c-640c-4324-b445-8079f4895dfa.png"
-                  alt="Mark Choi"
-                />
-                <AvatarFallback>MC</AvatarFallback>
+                <AvatarImage src="/images/avatar.png" alt="Mark Choi" />
+                <AvatarFallback>MS</AvatarFallback>
               </Avatar>
               <div
                 className={cn(
