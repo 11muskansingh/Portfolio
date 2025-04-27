@@ -56,14 +56,14 @@ const certifications = [
   },
 ];
 
-const courses = [
-  "Data Structures and Algorithms",
-  "Object-Oriented Programming",
-  "Database Management Systems",
-  "Operating Systems",
-  "Machine Learning Fundamentals",
-  "Artificial Intelligence Basics",
-];
+// const courses = [
+//   "Data Structures and Algorithms",
+//   "Object-Oriented Programming",
+//   "Database Management Systems",
+//   "Operating Systems",
+//   "Machine Learning Fundamentals",
+//   "Artificial Intelligence Basics",
+// ];
 
 const EducationPage = () => {
   return (
@@ -170,7 +170,7 @@ const EducationPage = () => {
       </div>
 
       {/* Additional Courses */}
-      <div>
+      {/* <div>
         <h2 className="text-2xl font-tech text-primary mb-8 flex items-center">
           <BookOpen className="mr-2" />
           Additional Courses
@@ -186,7 +186,7 @@ const EducationPage = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

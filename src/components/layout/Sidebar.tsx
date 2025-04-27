@@ -29,10 +29,10 @@ const navItems = [
   { name: "About me", path: "/about", icon: User },
   { name: "Education", path: "/education", icon: GraduationCap },
   { name: "Skills", path: "/skills", icon: BarChart3 },
-  { name: "Experience", path: "/experience", icon: Briefcase },
   { name: "Projects", path: "/portfolio", icon: LayoutIcon },
   { name: "Achievements", path: "/achievements", icon: Award },
   { name: "Updates", path: "/updates", icon: Bell },
+  { name: "Resume", path: "/resume", icon: Briefcase },
   { name: "Contact", path: "/contact", icon: Mail },
 ];
 

@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
@@ -13,7 +12,7 @@ import NotFound from "./pages/NotFound";
 import AboutPage from "./pages/AboutPage";
 import SkillsPage from "./pages/SkillsPage";
 import EducationPage from "./pages/EducationPage";
-import ExperiencePage from "./pages/ExperiencePage";
+import ExperiencePage from "./pages/ResumePage";
 import PortfolioPage from "./pages/PortfolioPage";
 import AchievementsPage from "./pages/AchievementsPage";
 import UpdatesPage from "./pages/UpdatesPage";
@@ -21,15 +20,16 @@ import ContactPage from "./pages/ContactPage";
 
 // Import layout components
 import Layout from "./components/layout/Layout";
+import ResumePage from "./pages/ResumePage";
 
 const queryClient = new QueryClient();
 
 const AppContent = () => {
-  const { mode } = useAppSelector(state => state.theme);
-  
+  const { mode } = useAppSelector((state) => state.theme);
+
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', mode === 'dark');
-    document.documentElement.classList.toggle('light', mode === 'light');
+    document.documentElement.classList.toggle("dark", mode === "dark");
+    document.documentElement.classList.toggle("light", mode === "light");
   }, [mode]);
 
   return (
@@ -40,7 +40,7 @@ const AppContent = () => {
           <Route path="about" element={<AboutPage />} />
           <Route path="skills" element={<SkillsPage />} />
           <Route path="education" element={<EducationPage />} />
-          <Route path="experience" element={<ExperiencePage />} />
+          <Route path="resume" element={<ResumePage />} />
           <Route path="portfolio" element={<PortfolioPage />} />
           <Route path="achievements" element={<AchievementsPage />} />
           <Route path="updates" element={<UpdatesPage />} />

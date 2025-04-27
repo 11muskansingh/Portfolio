@@ -1,4 +1,5 @@
 import PageHeading from "@/components/shared/PageHeading";
+import { motion } from "framer-motion";
 import {
   Database,
   Brain,
@@ -7,10 +8,16 @@ import {
   GitBranch,
   Server,
   Terminal,
+  BookOpen,
+  GraduationCap,
+  BadgeCheck,
+  Settings2,
+  Network,
+  Wrench,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BrainCircuit, Network, BadgeCheck } from "lucide-react";
+import { BrainCircuit } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -25,10 +32,10 @@ const SkillsPage = () => {
         "Proficient in MERN stack with experience in building real-world web applications like YouView and HireHub.",
     },
     {
-      icon: "database",
-      title: "Database Management",
+      icon: "badge-check",
+      title: "Problem Solver",
       description:
-        "Skilled in MongoDB and Firebase for efficient data modeling, queries, and real-time data handling.",
+        "Solved 800+ DSA problems on LeetCode and have 5⭐ in Java and Problem Solving on HackerRank.",
     },
     {
       icon: "brain-circuit",
@@ -43,137 +50,48 @@ const SkillsPage = () => {
         "Familiar with deploying full-stack apps on platforms like Render and integrating cloud storage using Cloudinary.",
     },
     {
-      icon: "badge-check",
-      title: "Problem Solver",
+      icon: "database",
+      title: "Database Management",
       description:
-        "Solved 800+ DSA problems on LeetCode and have 5⭐ in Java and Problem Solving on HackerRank.",
+        "Skilled in MongoDB and Firebase for efficient data modeling, queries, and real-time data handling.",
     },
   ];
 
-  const backendSkills = [
-    { name: "Python", icon: <Code className="h-8 w-8" />, level: 90, years: 5 },
-    {
-      name: "Node.js",
-      icon: <Code className="h-8 w-8" />,
-      level: 85,
-      years: 4,
-    },
-    {
-      name: "Django",
-      icon: <Server className="h-8 w-8" />,
-      level: 88,
-      years: 4,
-    },
-    {
-      name: "FastAPI",
-      icon: <Terminal className="h-8 w-8" />,
-      level: 82,
-      years: 3,
-    },
-    {
-      name: "Git",
-      icon: <GitBranch className="h-8 w-8" />,
-      level: 90,
-      years: 5,
-    },
+  const languages = ["Java", "JavaScript", "Python", "C", "HTML5", "SQL"];
+
+  const techStack = [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "Redux",
+    "Next.js",
+    "Mongoose",
+    "Tailwind CSS",
   ];
 
-  const frontendSkills = [
-    {
-      name: "React.js",
-      icon: <Code className="h-8 w-8" />,
-      level: 92,
-      years: 4,
-    },
-    {
-      name: "TypeScript",
-      icon: <Code className="h-8 w-8" />,
-      level: 88,
-      years: 3,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: <LayoutDashboard className="h-8 w-8" />,
-      level: 90,
-      years: 3,
-    },
-    {
-      name: "Next.js",
-      icon: <Code className="h-8 w-8" />,
-      level: 85,
-      years: 2,
-    },
+  const mlAndDataScience = [
+    "TensorFlow",
+    "Scikit-learn",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "Data Analysis",
   ];
 
-  const mlLibraries = [
-    {
-      name: "TensorFlow",
-      icon: <Brain className="h-8 w-8" />,
-      level: 85,
-      years: 3,
-    },
-    {
-      name: "PyTorch",
-      icon: <Brain className="h-8 w-8" />,
-      level: 80,
-      years: 2,
-    },
-    {
-      name: "Scikit-learn",
-      icon: <Brain className="h-8 w-8" />,
-      level: 88,
-      years: 3,
-    },
-    { name: "Pandas", icon: <Code className="h-8 w-8" />, level: 90, years: 4 },
-    { name: "NumPy", icon: <Code className="h-8 w-8" />, level: 92, years: 4 },
+  const coursework = [
+    "Data Structures and Algorithms",
+    "Database Management Systems (DBMS)",
+    "Operating System (OS)",
+    "Computer Networks",
+    "Object-Oriented Programming (OOPs)",
+    "Machine Learning Fundamentals",
   ];
 
-  const skillsCatalog = {
-    "Programming Languages": [
-      "Python",
-      "JavaScript",
-      "TypeScript",
-      "HTML5",
-      "CSS3",
-      "SQL",
-    ],
-    "Web Technologies": [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "RESTful APIs",
-      "GraphQL",
-      "WebSockets",
-    ],
-    "Frameworks & Libraries": [
-      "Django",
-      "FastAPI",
-      "Next.js",
-      "Redux",
-      "Material-UI",
-      "Tailwind CSS",
-    ],
-    Databases: ["PostgreSQL", "MongoDB", "Redis", "MySQL", "SQLite"],
-    "DevOps & Tools": ["Git", "Docker", "AWS", "CI/CD", "Linux", "Nginx"],
-    "Machine Learning": [
-      "TensorFlow",
-      "PyTorch",
-      "Scikit-learn",
-      "Pandas",
-      "NumPy",
-      "OpenCV",
-    ],
-    "Best Practices": [
-      "Clean Code",
-      "Test-Driven Development",
-      "Agile",
-      "SOLID Principles",
-      "Design Patterns",
-    ],
-  };
+  const tools = ["Git", "GitHub", "Postman", "VS Code", "Firebase", "FastAPI"];
 
   return (
-    <div className="container max-w-5xl mx-auto py-12">
+    <div className="container max-w-6xl mx-auto py-12 px-4">
       <PageHeading preTitle="Explore" title="My Skill Set" />
 
       {/* Conceptual Skills */}
@@ -191,23 +109,23 @@ const SkillsPage = () => {
         >
           {conceptualSkills.map((skill, index) => (
             <SwiperSlide key={index}>
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-lg transition-shadow h-full">
+              <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-xl hover:scale-105 transition-transform duration-300 h-full">
                 <CardContent className="p-6 text-center h-full flex flex-col justify-center">
-                  <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <div className="w-20 h-20 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     {skill.icon === "code" && (
-                      <Code className="h-8 w-8 text-primary" />
+                      <Code className="h-10 w-10 text-primary" />
                     )}
                     {skill.icon === "database" && (
-                      <Database className="h-8 w-8 text-primary" />
+                      <Database className="h-10 w-10 text-primary" />
                     )}
                     {skill.icon === "brain-circuit" && (
-                      <BrainCircuit className="h-8 w-8 text-primary" />
+                      <BrainCircuit className="h-10 w-10 text-primary" />
                     )}
                     {skill.icon === "network" && (
-                      <Network className="h-8 w-8 text-primary" />
+                      <Network className="h-10 w-10 text-primary" />
                     )}
                     {skill.icon === "badge-check" && (
-                      <BadgeCheck className="h-8 w-8 text-primary" />
+                      <BadgeCheck className="h-10 w-10 text-primary" />
                     )}
                   </div>
                   <h3 className="text-xl font-tech font-bold text-primary mb-2">
@@ -221,141 +139,58 @@ const SkillsPage = () => {
         </Swiper>
       </div>
 
-      {/* Backend Skills */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-tech text-primary mb-8 border-l-4 border-primary pl-4">
-          Backend Technologies
-        </h2>
-        <div className="space-y-6">
-          {backendSkills.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-card/50 backdrop-blur-sm rounded-lg p-4"
-            >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="bg-primary/10 p-2 rounded-full">
-                  {skill.icon}
-                </div>
-                <div className="flex-1">
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-primary">{skill.level}%</span>
-                  </div>
-                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary transition-all duration-1000"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="text-xs text-muted-foreground pl-16">
-                {skill.years}+ years experience
-              </div>
-            </div>
-          ))}
+      {/* Skills Sections */}
+      {[
+        {
+          title: "Languages",
+          icon: <Code className="h-6 w-6" />,
+          data: languages,
+        },
+        {
+          title: "Tech Stack",
+          icon: <Settings2 className="h-6 w-6" />,
+          data: techStack,
+        },
+        {
+          title: "Data Science & Machine Learning",
+          icon: <Brain className="h-6 w-6" />,
+          data: mlAndDataScience,
+        },
+        {
+          title: "Tools & Platforms",
+          icon: <Wrench className="h-6 w-6" />,
+          data: tools,
+        },
+        {
+          title: "Coursework",
+          icon: <BookOpen className="h-6 w-6" />,
+          data: coursework,
+        },
+      ].map((section, index) => (
+        <div key={index} className="mb-16">
+          <h2 className="text-2xl font-tech text-primary mb-8 border-l-4 border-primary pl-4 flex items-center gap-2">
+            {section.icon} {section.title}
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {section.data.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.05 }}
+              >
+                <Badge
+                  variant="secondary"
+                  className="px-5 py-3 text-base font-medium bg-primary/10 hover:bg-primary/20 transition-colors text-center w-full"
+                >
+                  {item}
+                </Badge>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-
-      {/* Frontend Skills */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-tech text-primary mb-8 border-l-4 border-primary pl-4">
-          Frontend Technologies
-        </h2>
-        <div className="space-y-6">
-          {frontendSkills.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-card/50 backdrop-blur-sm rounded-lg p-4"
-            >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="bg-primary/10 p-2 rounded-full">
-                  {skill.icon}
-                </div>
-                <div className="flex-1">
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-primary">{skill.level}%</span>
-                  </div>
-                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary transition-all duration-1000"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="text-xs text-muted-foreground pl-16">
-                {skill.years}+ years experience
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* ML Libraries */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-tech text-primary mb-8 border-l-4 border-primary pl-4">
-          Machine Learning & Data Science
-        </h2>
-        <div className="space-y-6">
-          {mlLibraries.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-card/50 backdrop-blur-sm rounded-lg p-4"
-            >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="bg-primary/10 p-2 rounded-full">
-                  {skill.icon}
-                </div>
-                <div className="flex-1">
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-primary">{skill.level}%</span>
-                  </div>
-                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary transition-all duration-1000"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="text-xs text-muted-foreground pl-16">
-                {skill.years}+ years experience
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Skills Catalog */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-tech text-primary mb-8 border-l-4 border-primary pl-4">
-          Skills Catalog
-        </h2>
-        <div className="grid gap-8">
-          {Object.entries(skillsCatalog).map(([category, skills]) => (
-            <div
-              key={category}
-              className="bg-card/50 backdrop-blur-sm rounded-lg p-6"
-            >
-              <h3 className="text-lg font-medium mb-4">{category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <Badge
-                    key={skill}
-                    variant="secondary"
-                    className="px-3 py-1 text-sm bg-primary/10 hover:bg-primary/20 transition-colors"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      ))}
     </div>
   );
 };
