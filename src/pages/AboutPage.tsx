@@ -1,6 +1,5 @@
 import PageHeading from "@/components/shared/PageHeading";
 import {
-  Guitar,
   Video,
   Pencil,
   LineChart,
