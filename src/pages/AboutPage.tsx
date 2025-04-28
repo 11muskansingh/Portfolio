@@ -37,18 +37,18 @@ const AboutPage = () => {
 
   const testimonials = [
     {
-      name: "Aarav Sharma",
-      position: "Classmate at XYZ University",
+      name: "Muskan Gupta",
+      position: "Classmate",
       text: "Muskan is a highly motivated individual with exceptional problem-solving skills. Her ability to collaborate and contribute innovative ideas makes her a valuable team member.",
     },
     {
-      name: "Ishita Patel",
-      position: "Project Partner at XYZ University",
+      name: "Chinmay Pandey",
+      position: "Project Partner",
       text: "Working with Muskan on our projects has been a great experience. Her technical expertise and dedication to excellence are truly commendable.",
     },
     {
-      name: "Rohan Gupta",
-      position: "Lab Partner at XYZ University",
+      name: "Keshav Awasthi",
+      position: "Project Partner",
       text: "Muskan's attention to detail and her ability to simplify complex concepts have been instrumental in our academic success. She is a dependable and hardworking individual.",
     },
   ];
@@ -86,7 +86,7 @@ const AboutPage = () => {
             </div>
           </div>
 
-          <div className=" p-6 rounded-lg shadow-lg space-y-4 text-gray-300 text-justify">
+          <div className=" p-6 rounded-lg shadow-lg space-y-4 text-gray-800 dark:text-gray-300">
             <p>
               I am a passionate MERN stack developer skilled in JavaScript,
               React, Node.js, and MongoDB, focused on building dynamic and

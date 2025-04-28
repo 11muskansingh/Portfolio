@@ -26,7 +26,7 @@ const updates = [
     date: "February 15, 2025",
     category: "Growth Timeline",
     content:
-      "Participated in BNY CodeDivas 2025. Successfully cleared two online assessments and the first interview round. Despite strong performance, faced rejection after the second interview. Learned valuable insights into system design and behavioral interview strategies.",
+      "Participated in BNY CodeDivas 2025. Successfully cleared two online assessments and the first interview round. Despite strong performance, faced rejection after the second interview. Learned valuable insights into technical skills and behavioral interview strategies.",
   },
   {
     id: 4,
@@ -175,7 +175,7 @@ const UpdatesPage = () => {
       </div>
 
       {/* Newsletter Signup */}
-      <div className="mt-16 bg-card rounded-lg p-8 shadow-md text-center">
+      {/* <div className="mt-16 bg-card rounded-lg p-8 shadow-md text-center">
         <h2 className="text-2xl font-tech text-primary mb-4">Stay Updated</h2>
         <p className="mb-6 text-muted-foreground">
           Subscribe to my newsletter for monthly updates on new projects,
@@ -198,7 +198,7 @@ const UpdatesPage = () => {
             </button>
           </div>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };

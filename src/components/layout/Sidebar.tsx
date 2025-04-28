@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import {
   User,
@@ -28,27 +28,25 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 const navItems = [
   { name: "About me", path: "/about", icon: User },
   { name: "Education", path: "/education", icon: GraduationCap },
+  { name: "Updates", path: "/updates", icon: Bell },
   { name: "Skills", path: "/skills", icon: BarChart3 },
   { name: "Projects", path: "/portfolio", icon: LayoutIcon },
   { name: "Achievements", path: "/achievements", icon: Award },
-  { name: "Updates", path: "/updates", icon: Bell },
   { name: "Resume", path: "/resume", icon: Briefcase },
   { name: "Contact", path: "/contact", icon: Mail },
 ];
 
 const Sidebar = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const themeMode = useAppSelector((state) => state.theme.mode);
   const { state, openMobile, setOpenMobile } = useSidebar();
   const isCollapsed = state === "collapsed";
 
-  // Auto close sidebar on mobile after navigation
   useEffect(() => {
     if (openMobile) {
       setOpenMobile(false);
     }
-  }, [location.pathname, setOpenMobile, openMobile]);
+  }, [location.pathname]);
 
   return (
     <>
@@ -58,29 +56,29 @@ const Sidebar = () => {
           <Link
             to="/"
             className={cn(
-              "flex flex-col items-center justify-center p-4 border-b border-sidebar-border",
-              isCollapsed ? "py-3" : "p-4"
+              "flex flex-col items-center justify-center border-b border-sidebar-border transition-all",
+              isCollapsed ? "py-6" : "p-4"
             )}
           >
             <div
               className={cn(
-                "relative transition-all duration-300",
-                isCollapsed ? "w-10 h-10" : "w-24 h-24"
+                "relative",
+                isCollapsed ? "w-14 h-14" : "w-24 h-24"
               )}
             >
               <Avatar
                 className={cn(
                   "border-2 border-primary",
-                  isCollapsed ? "w-10 h-10" : "w-24 h-24"
+                  isCollapsed ? "w-14 h-14" : "w-24 h-24"
                 )}
               >
-                <AvatarImage src="/images/avatar.png" alt="Mark Choi" />
+                <AvatarImage src="/images/avatar.png" alt="Muskan Singh" />
                 <AvatarFallback>MS</AvatarFallback>
               </Avatar>
               <div
                 className={cn(
                   "absolute bottom-0 right-0 bg-green-500 rounded-full border border-background",
-                  isCollapsed ? "w-3 h-3" : "w-4 h-4"
+                  isCollapsed ? "w-3.5 h-3.5" : "w-4 h-4"
                 )}
               ></div>
             </div>
@@ -88,7 +86,7 @@ const Sidebar = () => {
               <div className="mt-3 text-center">
                 <h1 className="text-xl font-bold font-tech">Muskan Singh</h1>
                 <p className="text-sm text-muted-foreground">
-                  Full Stack Developer{" "}
+                  Full Stack Developer
                 </p>
               </div>
             )}
@@ -109,19 +107,27 @@ const Sidebar = () => {
                       <Link
                         to={item.path}
                         className={cn(
-                          "flex items-center px-4 py-3 rounded-lg transition-all gap-3",
+                          "group flex items-center transition-all rounded-lg",
+                          isCollapsed
+                            ? "justify-center py-4"
+                            : "px-4 py-3 gap-3",
                           isActive
                             ? "bg-primary text-primary-foreground"
-                            : "hover:bg-sidebar-accent",
-                          isCollapsed && "justify-center px-0"
+                            : "hover:bg-sidebar-accent"
                         )}
                       >
-                        <item.icon
-                          className={cn(
-                            "shrink-0",
-                            isCollapsed ? "h-6 w-6" : "h-5 w-5"
+                        <div className="relative flex items-center justify-center">
+                          {/* Left active border */}
+                          {isCollapsed && isActive && (
+                            <div className="absolute left-0 h-6 w-1 bg-primary rounded-r-full"></div>
                           )}
-                        />
+                          <item.icon
+                            className={cn(
+                              "shrink-0",
+                              isCollapsed ? "h-6 w-6" : "h-5 w-5"
+                            )}
+                          />
+                        </div>
                         {!isCollapsed && (
                           <span className="truncate">{item.name}</span>
                         )}
@@ -144,9 +150,6 @@ const Sidebar = () => {
               <span className="inline-block w-6 h-6">
                 {themeMode === "dark" ? "🌙" : "☀️"}
               </span>
-              {!isCollapsed && (
-                <span className="text-xs text-muted-foreground ml-2"></span>
-              )}
             </div>
           </div>
         </SidebarContent>

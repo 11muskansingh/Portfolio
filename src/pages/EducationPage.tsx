@@ -1,5 +1,11 @@
 import PageHeading from "@/components/shared/PageHeading";
-import { GraduationCap, BookOpen, Award, Calendar } from "lucide-react";
+import {
+  GraduationCap,
+  BookOpen,
+  Award,
+  Calendar,
+  ExternalLink,
+} from "lucide-react";
 
 const educations = [
   {
@@ -37,22 +43,22 @@ const certifications = [
     title: "Node.js Certification",
     issuer: "Scalable Path",
     date: "2024",
-    credentialId: "AWS-ASA-12345",
     skills: ["Node.js", "JavaScript", "Backend Development"],
+    link: "https://drive.google.com/file/d/16tugDLkRoIEZ4cj4uRxR9yQ6ohybPnEq/view?usp=sharing",
   },
   {
     title: "JavaScaript Certification",
     issuer: "Infosys Springboard",
     date: "2024",
-    credentialId: "GCP-123-XYZ",
     skills: ["JavaScript", "Web Development"],
+    link: "https://drive.google.com/file/d/1MQMA3Fi_3cb-FrKvjl_Vww1dAseyAkCW/view?usp=sharing",
   },
   {
     title: "Java Basic Certification",
     issuer: "HackerRank",
     date: "2024",
-    credentialId: "CKA-234567",
     skills: ["Java", "Programming", "Data Structures"],
+    link: "https://drive.google.com/file/d/1m3hOTKfnTXQL3BfwfDDVZ8sp05vjiy80/view?usp=sharing",
   },
 ];
 
@@ -145,10 +151,10 @@ const EducationPage = () => {
                   <span className="text-muted-foreground">Expires:</span>
                   <span>{cert?.expires}</span>
                 </div> */}
-                <div className="flex justify-between">
+                {/* <div className="flex justify-between">
                   <span className="text-muted-foreground">Credential ID:</span>
                   <span className="text-sm">{cert.credentialId}</span>
-                </div>
+                </div> */}
               </div>
 
               <div className="mt-4 pt-4 border-t border-border">
@@ -163,6 +169,18 @@ const EducationPage = () => {
                     </span>
                   ))}
                 </div>
+              </div>
+
+              <div className="flex space-x-3 mt-4">
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-secondary rounded-full hover:bg-primary/20 transition-colors"
+                  title="View Credential"
+                >
+                  <ExternalLink className="w-5 h-5" />
+                </a>
               </div>
             </div>
           ))}
