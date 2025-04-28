@@ -10,7 +10,7 @@ const updates = [
     category: "Project Launch",
     content:
       "Excited to announce the launch of my new portfolio website! Built with React, Tailwind CSS, and a focus on clean design and responsiveness, it highlights my projects, achievements, and skills in full-stack development.",
-    image: "../public/images/portfolio.png",
+    image: "/images/portfolio.png",
   },
   {
     id: 2,
@@ -116,11 +116,10 @@ const UpdatesPage = () => {
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            className={`px-3 py-1 rounded-full text-sm transition-colors ${
-              activeCategory === category
+            className={`px-3 py-1 rounded-full text-sm transition-colors ${activeCategory === category
                 ? "bg-primary text-primary-foreground"
                 : "bg-secondary hover:bg-secondary-foreground/10"
-            }`}
+              }`}
           >
             {category}
           </button>

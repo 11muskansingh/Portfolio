@@ -9,7 +9,7 @@ const ResumePage = () => {
       {/* PDF Viewer - For all screens */}
       <div className="w-full relative pb-[141.4%] mb-12">
         <iframe
-          src="../public/images/Muskan_Singh_s_Resume.pdf#view=Fit"
+          src="/images/Muskan_Singh_s_Resume.pdf#view=Fit"
           className="absolute top-0 left-0 w-full h-full"
           style={{ border: "none" }}
           title="Muskan Singh Resume"
@@ -19,7 +19,7 @@ const ResumePage = () => {
       {/* Download Resume Button */}
       <div className="text-center">
         <a
-          href="../public/images/Muskan_Singh_s_Resume.pdf"
+          href="/images/Muskan_Singh_s_Resume.pdf"
           download
           className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/80 transition-colors"
         >

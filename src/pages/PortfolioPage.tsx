@@ -8,7 +8,7 @@ const projects = [
     id: 1,
     title: "HireHub",
     type: "Dev Projects",
-    image: "../../public/images/hirehub.png",
+    image: "/images/HireHub.png",
     description:
       "HireHub is a full-stack job portal designed to simplify the job search and hiring process. With role-based access, real-time updates, and a responsive UI, it connects recruiters and job seekers in a seamless hiring ecosystem.",
     tags: ["MERN", "Firebase", "Job Hunt"],
@@ -21,7 +21,7 @@ const projects = [
     id: 2,
     title: "YouView",
     type: "Dev Projects",
-    image: "../../public/images/YouView.png",
+    image: "/images/YouView.png",
     description:
       "YouView is a fully functional YouTube clone providing users with a complete video browsing and streaming experience. Built with a modern tech stack, YouView allows users to search, upload, interact with, and organize videos within a visually appealing and intuitive interface.",
     tags: ["MERN", "Secure Login", "Video Upload"],
@@ -34,7 +34,7 @@ const projects = [
     id: 3,
     title: "ReactJS Projects",
     type: "Dev Projects",
-    image: "../public/images/ReactJs.png",
+    image: "/images/ReactJs.png",
     description:
       "A collection of ReactJS projects showcasing various features and functionalities, including a password generator and more.",
     tags: ["React", "Copy", "Pawword Management"],
@@ -46,7 +46,7 @@ const projects = [
     id: 4,
     title: "Stone Paper Scissors Game",
     type: "Dev Projects",
-    image: "../public/images/Sps.png",
+    image: "/images/Sps.png",
     description:
       "Stone Paper Scissors is a fun and interactive web game where players compete against the computer using classic hand signs. Built with clean UI and smooth animations, it offers an engaging and responsive gaming experience.",
     tags: ["JavaScript", "Game", "Responsive UI", "Fun Project"],
@@ -59,7 +59,7 @@ const projects = [
     id: 5,
     title: "Netflix Clone",
     type: "Dev Projects",
-    image: "../public/images/Netflix.png",
+    image: "/images/Netflix.png",
     description:
       "This project is a static clone of the Netflix website, showcasing fundamental HTML and CSS skills. It aims to replicate the Netflix homepage with a focus on responsive design.",
     tags: ["UI Clone", "Responsive Design", "Frontend Project"],
@@ -72,7 +72,7 @@ const projects = [
     id: 6,
     title: "TalkHub",
     type: "ML Projects",
-    image: "../public/images/Talkhub.png",
+    image: "/images/Talkhub.png",
     description:
       "talkHub is an AI-powered voice assistant that allows users to interact with the application using voice commands and receive spoken responses. This project leverages OpenAI's API for natural language processing and conversation generation, making it a powerful and versatile voice assistant.",
     tags: ["AI", "Voice Assistant", "OpenAI API"],
@@ -111,11 +111,10 @@ const PortfolioPage = () => {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                activeFilter === filter
-                  ? "bg-primary text-primary-foreground"
-                  : "hover:bg-secondary-foreground/10"
-              }`}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeFilter === filter
+                ? "bg-primary text-primary-foreground"
+                : "hover:bg-secondary-foreground/10"
+                }`}
             >
               {filter} {filter === "All" && `(${projects.length})`}
               {filter === "Dev Projects" &&
