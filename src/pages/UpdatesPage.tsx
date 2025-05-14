@@ -5,6 +5,15 @@ import { Calendar, Tag, User, ArrowRight } from "lucide-react";
 const updates = [
   {
     id: 1,
+    title: "Achieved 653rd Rank in LeetCode Biweekly Contest",
+    date: "May 10, 2025",
+    category: "Achievement",
+    content:
+      "I achieved a 653rd global rank out of 21,000 participants in a recent LeetCode Biweekly Contest, reaching a rating of 1790. This milestone reflects my dedication to problem-solving and consistent practice on LeetCode.",
+    image: "/images/leetcode.png",
+  },
+  {
+    id: 2,
     title: "Launched New Portfolio Website",
     date: "April 20, 2025",
     category: "Project Launch",
@@ -13,7 +22,7 @@ const updates = [
     image: "/images/portfolio.png",
   },
   {
-    id: 2,
+    id: 3,
     title: "Launched HireHub – Full-Stack Job Portal",
     date: "April 15, 2025",
     category: "Project Launch",
@@ -21,7 +30,7 @@ const updates = [
       "Released HireHub, a scalable full-stack job portal built using the MERN stack with Firebase Authentication. It features role-based dashboards, job posting, application tracking, resume upload, and personalized job recommendations for users.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Rejected After Final Interview at BNY CodeDivas 2025",
     date: "February 15, 2025",
     category: "Growth Timeline",
@@ -29,7 +38,7 @@ const updates = [
       "Participated in BNY CodeDivas 2025. Successfully cleared two online assessments and the first interview round. Despite strong performance, faced rejection after the second interview. Learned valuable insights into technical skills and behavioral interview strategies.",
   },
   {
-    id: 4,
+    id: 5,
     title: "Solved 800+ Coding Questions on LeetCode",
     date: "March 30, 2025",
     category: "Achievement",
@@ -37,7 +46,7 @@ const updates = [
       "Reached a major milestone by solving over 800 coding problems on LeetCode using Java. This journey has sharpened my problem-solving and algorithmic thinking significantly.",
   },
   {
-    id: 5,
+    id: 6,
     title: "Rejected in OA Rounds - DE Shaw, LinkedIn, Microsoft",
     date: "December 20, 2024",
     category: "Growth Timeline",
@@ -45,7 +54,7 @@ const updates = [
       "Gave online assessments for DE Shaw, LinkedIn, and Microsoft in December 2024. Although did not clear the OA rounds, gained deep exposure to company-specific problem patterns and enhanced speed-solving strategies for future assessments.",
   },
   {
-    id: 6,
+    id: 7,
     title: "Completed YouView – YouTube Full-Stack Clone",
     date: "October 15, 2024",
     category: "Project Launch",
@@ -53,7 +62,7 @@ const updates = [
       "Developed YouView, a full-stack YouTube clone with features like video uploads, streaming, likes, comments, user authentication using JWT, history tracking, and category-wise search and filtering using MERN stack.",
   },
   {
-    id: 7,
+    id: 8,
     title: "Rejected in Online Assessment Round at Goldman Sachs",
     date: "October 10, 2024",
     category: "Growth Timeline",
@@ -61,7 +70,7 @@ const updates = [
       "Resume shortlisted for Goldman Sachs. Cleared the Aptitude Test round successfully. However, faced rejection in the Online Assessment round. Gained important experience in aptitude-based filtering processes and refined time management under pressure.",
   },
   {
-    id: 8,
+    id: 9,
     title: "Achieved Top 10% Ranking on LeetCode",
     date: "August 10, 2024",
     category: "Achievement",
@@ -69,7 +78,7 @@ const updates = [
       "Achieved a top 10% global ranking on LeetCode with a rating of 1700+, demonstrating consistent performance in data structures and algorithms.",
   },
   {
-    id: 9,
+    id: 10,
     title: "Completed Node.js Course by Scaler",
     date: "June 5, 2024",
     category: "Certification",
@@ -77,7 +86,7 @@ const updates = [
       "Completed the Comprehensive Node.js Course by Scaler, gaining deep understanding of Express.js, REST APIs, and server-side development.",
   },
   {
-    id: 10,
+    id: 11,
     title: "Completed JavaScript Course by Scaler",
     date: "April 15, 2024",
     category: "Certification",
@@ -117,8 +126,8 @@ const UpdatesPage = () => {
             key={category}
             onClick={() => setActiveCategory(category)}
             className={`px-3 py-1 rounded-full text-sm transition-colors ${activeCategory === category
-                ? "bg-primary text-primary-foreground"
-                : "bg-secondary hover:bg-secondary-foreground/10"
+              ? "bg-primary text-primary-foreground"
+              : "bg-secondary hover:bg-secondary-foreground/10"
               }`}
           >
             {category}
